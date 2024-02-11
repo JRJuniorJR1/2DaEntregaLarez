@@ -1,0 +1,17 @@
+.logo-inicio{
+    width: 100px;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+  }
+  a:hover {
+    color: blue;
+  }
+
+li {
+    list-style-type: none;
+}
