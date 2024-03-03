@@ -8,6 +8,9 @@ const ItemDetail = ({ producto }) => {
     const [cart, setCart] = useState(false);
     const { agregarCarrito } = useContext(CartContext);
 
+    const formattedPrice = producto && producto.precio 
+        ? producto.precio.toLocaleString('es-ES', { style: 'currency', currency: 'CLP', useGrouping: true })
+        : '';
     const onAdd = (count) => {
         setCart(true);
         agregarCarrito(producto, count);
@@ -24,7 +27,7 @@ const ItemDetail = ({ producto }) => {
             ) : (
                 <img className="item-detail-image" src={producto.img} alt={producto.nombre} />
             )}
-            <h3>Precio: {producto.precio}</h3>
+            <h3>Precio: {formattedPrice}</h3>
             <h3>Stock: {producto.stock}</h3>
             <p>Descripcion: {producto.description}</p>
 

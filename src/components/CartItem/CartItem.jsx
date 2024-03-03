@@ -15,7 +15,7 @@ const CartItem = ({ product, removeItem }) => {
 
     const handleIncreaseQuantity = () => {
         increaseQuantity(product.producto.id);
-    };
+    };    
 
     return (
             <div className="cart-item-container">
