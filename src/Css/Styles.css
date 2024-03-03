@@ -435,6 +435,17 @@ text-align: center;
 border-radius: 5px;
 }
 
+.center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-cart:hover {
+  background-color: #555 ;
+}
+
 .title-cart-vacio{
 text-align: center;
 }
