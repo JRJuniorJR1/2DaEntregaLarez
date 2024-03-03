@@ -24,12 +24,12 @@ const CartItem = ({ product, removeItem }) => {
                     <img src={product.producto.img} alt={product.producto.nombre} />
                 </div>
                 <div className="quantity-container">
-                    <button onClick={handleDecreaseQuantity}>-</button>
+                    <button className='counter-button-menos' onClick={handleDecreaseQuantity}>-</button>
                     <p>Cantidad: {product.cantidad}</p>
-                    <button onClick={handleIncreaseQuantity}>+</button>
+                    <button className='counter-button-mas' onClick={handleIncreaseQuantity}>+</button>
                 </div>
                 <p>Costo: ${product.producto.precio * product.cantidad}</p>
-                <button onClick={handleRemoveItem}>Eliminar producto</button>
+                <button className='counter-button-delete-cart' onClick={handleRemoveItem}>Eliminar producto</button>
             </div>
     );
 };

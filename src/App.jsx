@@ -7,6 +7,9 @@ import Footer from './components/Footer/Footer'
 import Cart from './components/Cart/Cart'
 import CartProvider from './context/CartContext'
 import CheckOut from './components/CheckOut/CheckOut'
+import PoliticaDevolucion from './components/PoliticaDevolucion/PoliticaDevolucion'
+import PoliticaPrivacidad from './components/PoliticaPrivacidad/PoliticaPrivacidad'
+import TerminosCondiciones from  './components/TerminosCondiciones/TerminosCondiciones'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 
@@ -25,6 +28,9 @@ function App() {
                   <Route path='*' element={<Error/>}/>
                   <Route path='/cart' element={<Cart/>}/>
                   <Route path='/checkout' element={<CheckOut/>}/>
+                  <Route path='/politicadevolucion' element={<PoliticaDevolucion/>}/>
+                  <Route path='/politicaprivacidad' element={<PoliticaPrivacidad/>}/>
+                  <Route path='/terminoscondiciones' element={<TerminosCondiciones/>}/>
 
                 </Routes>            
               <Footer />

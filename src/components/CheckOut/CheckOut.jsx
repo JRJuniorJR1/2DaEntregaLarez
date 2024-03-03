@@ -3,6 +3,7 @@ import { db } from '../../firebase/config';
 import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore';
 import { CartContext } from '../../context/CartContext';
 import { Button, TextField, Grid, Typography } from '@mui/material';
+import { Link, NavLink } from 'react-router-dom'
 import '../../Css/Styles.css';
 
 const Checkout = () => {
@@ -206,17 +207,21 @@ const Checkout = () => {
                         value={codigoPostal}
                         onChange={(e) => setCodigoPostal(e.target.value)}
                     />
-                    <Button type="submit" fullWidth variant="contained" sx={{ mt: 2 }}>
+                    <Button type="submit" fullWidth variant="contained" sx={{ mt: 2 }} id='button-checkout-complete'>
                         Completar compra
                     </Button>
                     {error && <Typography style={{ color: 'red', marginTop: '10px' }}>{error}</Typography>}
                     {ordenId && (
                         <Typography variant="body1" align="center" gutterBottom style={{ marginTop: '20px' }}>
                             ¡Gracias por tu compra! Tu número de orden es: {ordenId}
+                            <br />
+                            <button className="empty-cart-button"><Link to={"/"} className="empty-cart-button text-center">Ir al inicio</Link></button>
                         </Typography>
                     )}
                 </form>
                 
+
+
             </Grid>
         </Grid>
     );
